@@ -4,19 +4,22 @@ public class Animal {
 	
 	private String nome;
 	private int idade;
-	private String acao;
 	
-	public Animal(String nome, int idade, String acao) {
+	public Animal(String nome, int idade) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
-		this.acao = acao;
+	}
+	
+	public void emitirSom() 
+	{
+		System.out.println("Emitir som");
 	}
 	
 	public void imprimirInfo()
 	{
 		System.out.println("Nome: "+nome+" \nIdade: "+
-		idade+"\nAcão: "+acao);
+		idade);
 	}
 
 	public String getNome() {
@@ -33,14 +36,6 @@ public class Animal {
 
 	public void setIdade(int idade) {
 		this.idade = idade;
-	}
-	
-	public String getAcao() {
-		return acao;
-	}
-
-	public void setAcao(String acao) {
-		this.acao = acao;
 	}
 
 }

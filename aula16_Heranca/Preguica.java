@@ -2,26 +2,21 @@ package aula16_Heranca;
 
 public class Preguica extends Animal{
 	
-	private String outraAcao;
-	
-	public Preguica(String nome,int idade,String acao,String outraAcao)
+	public Preguica(String nome,int idade)
 	{
-		super(nome,idade,acao);
-		this.outraAcao=outraAcao;
+		super(nome,idade);
 	}
 	
-	public void imprimirInfo()
+	@Override
+	public void emitirSom() 
 	{
-		System.out.println("Nome: "+getNome()+" \nIdade: "+
-		getIdade()+"\nAcão1: "+getAcao()+"\nAção2: "+outraAcao+"\n");
+		System.out.println("Som da preguiça!!!");
 	}
-
-	public String getOutraAcao() {
-		return outraAcao;
+	
+	public void acao2()
+	{
+		System.out.println("Subir em árvores...");
 	}
-
-	public void setOutraAcao(String outraAcao) {
-		this.outraAcao = outraAcao;
-	}
+	
 	
 }

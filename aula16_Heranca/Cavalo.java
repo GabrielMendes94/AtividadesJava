@@ -2,26 +2,20 @@ package aula16_Heranca;
 
 public class Cavalo extends Animal {
 	
-	private String outraAcao;
-	
-	public Cavalo(String nome,int idade,String acao,String outraAcao)
+	public Cavalo(String nome,int idade)
 	{
-		super(nome,idade,acao);
-		this.outraAcao=outraAcao;
+		super(nome,idade);
 	}
 	
-	public void imprimirInfo()
+	@Override
+	public void emitirSom() 
 	{
-		System.out.println("Nome: "+getNome()+" \nIdade: "+
-		getIdade()+"\nAcão1: "+getAcao()+"\nAção2: "+outraAcao+"\n");
+		System.out.println("Som do cavalo!!!");
 	}
-
-	public String getOutraAcao() {
-		return outraAcao;
-	}
-
-	public void setOutraAcao(String outraAcao) {
-		this.outraAcao = outraAcao;
+	
+	public void acao2()
+	{
+		System.out.println("Correr...");
 	}
 
 }
